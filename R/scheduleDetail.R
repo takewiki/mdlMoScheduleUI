@@ -15,6 +15,10 @@ scheduleDetailFunc_left<- function() {
   res <- tagList(
 
     tsui::mdl_dateRange(id = 'dtscheduleDetail_dates',label = '排产起止日期范围'),
+    tsui::layout_2C(x = tsui::mdl_text2(id = 'txtscheduleDetail_FCompanyName',label = '公司',value = ''),
+                    y=tsui::mdl_text2(id = 'txtscheduleDetail_FWorkShop',label = '生产车间',value = '')),
+    tsui::layout_2C(x = tsui::mdl_text2(id = 'txtscheduleDetail_FRouteName',label = '工序',value = ''),
+                    y=tsui::mdl_text2(id = 'txtscheduleDetail_FPrdSeries',label = '产品系列',value = '')),
     tsui::layout_2C(x = tsui::mdl_text2(id = 'txtscheduleDetail_FPrdNumber_start',label = '开始产品代码',value = '802685'),
                     y=tsui::mdl_text2(id = 'txtscheduleDetail_FPrdNumber_end',label = '结束产品代码',value = '802685')),
     tsui::layout_2C(x =tsui::mdl_text2(id = 'txtscheduleDetail_FMoNumber_start',label = '开始生产订单编号',value = 'MO202204499')
