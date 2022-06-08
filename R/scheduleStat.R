@@ -13,8 +13,12 @@
 scheduleStatFunc_left<- function() {
 
   res <- tagList(
-     tsui::mdl_text2(id = 'txtscheduleStat_FPrdNumber_start',label = '开始产品代码',value = '801203-99'),
-     tsui::mdl_text2(id = 'txtscheduleStat_FPrdNumber_end',label = '结束产品代码',value = '801203-99'),
+      tsui::layout_2C(x=tsui::mdl_text2(id = 'txtscheduleStat_FPrdNumber_start',label = '开始产品代码',value = '801203-99'),
+                      y=tsui::mdl_text2(id = 'txtscheduleStat_FPrdNumber_end',label = '结束产品代码',value = '801203-99')),
+     tsui::layout_2C(x = tsui::mdl_text2(id = 'txtscheduleStat_FCompanyName',label = '公司',value = ''),
+                     y=tsui::mdl_text2(id = 'txtscheduleStat_FWorkShop',label = '生产车间',value = '')),
+     tsui::layout_2C(x = tsui::mdl_text2(id = 'txtscheduleStat_FRouteName',label = '工序',value = ''),
+                     y=tsui::mdl_text2(id = 'txtscheduleStat_FPrdSeries',label = '产品系列',value = '')),
      tsui::mdl_text2(id = 'txtscheduleStat_FMoNumber',label = '生产订单编号',value = 'MO202204665'),
      hr(),
      tsui::layout_2C(shinyWidgets::actionBttn(inputId = 'btnscheduleStat_query',label = '查看'),
